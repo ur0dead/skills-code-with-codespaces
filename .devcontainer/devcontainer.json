@@ -1,20 +1,21 @@
-{
+// filepath: /workspaces/skills-code-with-codespaces/.devcontainer/devcontainer.json
+
+  {
   "name": "Universal - Latest",
   "image": "mcr.microsoft.com/devcontainers/universal:latest",
   "features": {
-    "ghcr.io/davzucky/devcontainers-features-wolfi/python:1": {
-      "installRuff": true,
-      "installUV": true,
-      "pythonVersion": "3.10"
-    }
-  },
-  "postCreateCommand": "bash .devcontainer/postCreate.sh",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "ms-python.debugpy"
-      ]
-    }
+   "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "version": "3.12"
+   }
+},
+"postCreateCommand": "bash .devcontainer/postCreate.sh",
+"customizations": {
+  "vscode": {
+    "extensions": [
+      "ms-python.python",
+      "ms-python.debugpy"
+    ]
   }
+},
 }

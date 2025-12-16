@@ -1,6 +1,7 @@
+# filepath: /workspaces/skills-code-with-codespaces/.devcontainer/postCreate.sh
 #!/bin/bash
 
-sudo apt-get update
-sudo apt-get install sl
-echo "export PATH=\$PATH:/usr/games" >> ~/.bashrc
-echo "export PATH=\$PATH:/usr/games" >> ~/.zshrc
+apk update
+apk add sl
+echo "export PATH=\$PATH:/usr/bin" >> ~/.bashrc
+echo "export PATH=\$PATH:/usr/bin" >> ~/.zshrc
